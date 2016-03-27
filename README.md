@@ -23,6 +23,12 @@ _**all examples assume an instance of `Follow` as `follow`**_
 follow.user(); //the user instance for the follow instance.
 ```
 
+**isDuplicate** - check to see if a follow already exists between the current user and the (calling) user.
+
+```javascript
+follow.isDuplicate(); //boolean if follow already exists.
+```
+
 ## User Extensions ##
 This package extends the [socialize:user-model](https://github.com/copleykj/socialize-user-model) package with properties and methods that apply the the user in the context of follows and follow requests.
 
@@ -79,6 +85,7 @@ Template.userProfile.events({
         this.follow();
     }
 });
+```
 
 **unfollow** - Sever the follow connection from the current user to the (calling) user.
 
@@ -89,7 +96,6 @@ Template.userProfile.events({
         this.unfollow();
     }
 });
-```
 ```
 
 **isFollowed()** - Check if the current user is following the (calling) user.
