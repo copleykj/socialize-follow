@@ -52,13 +52,13 @@ var currentUser = Meteor.user();
 **followingAsUsers(limit, skip)** - Get user's following as the users they represent. Returns a Mongo.Cursor which yields User instances.
 
 ```html
-{{#each currentUser.followsAsUsers}}
+{{#each currentUser.followingAsUsers}}
     <!-- User instances this time instead of Follow instances -->
     <p>{{username}}</p>
 {{/each}}
 ```
 
-**followers(limit, skip)** - Gets user's follower users. Returns a Mongo.Cursor which yields Follow instances
+**followers(limit, skip)** - Get user's follower users. Returns a Mongo.Cursor which yields Follow instances
 
 ```html
 {{#each currentUser.followers}}
@@ -70,7 +70,7 @@ var currentUser = Meteor.user();
 **followersAsUsers(limit, skip)** - Get followers for user as the users they represent. Returns a Mongo.Cursor which yields User instances.
 
 ```html
-{{#each currentUser.followsAsUsers}}
+{{#each currentUser.followersAsUsers}}
     <!-- User instances this time instead of Follow instances -->
     <p>{{username}}</p>
 {{/each}}
@@ -98,7 +98,7 @@ Template.userProfile.events({
 });
 ```
 
-**isFollowed()** - Check if the current user is following the (calling) user.
+**isFollowed** - Check if the current user is following the (calling) user.
 
 ```html
 {{#if this.isFollowed}}
@@ -108,4 +108,4 @@ Template.userProfile.events({
 
 ## Publications ##
 
-Previous verions of this package provided convenient publications for publishing related data. Over the life of the package though, I have come to realize that publications are too application specific and you should not be locked in to a specific join package for the publications to be pre packaged. Instead publication examples can be found on the [github wiki page for this package](https://github.com/copleykj/socialize-followships/wiki/Publications).
+Previous verions of this package provided convenient publications for publishing related data. Over the life of the package though, I have come to realize that publications are too application specific and you should not be locked in to a specific join package for the publications to be pre packaged. Instead publication examples can be found on the [github wiki page for this package](https://github.com/copleykj/socialize-follow/wiki/Publications).
