@@ -32,7 +32,7 @@ User.methods({
      * @returns {Mongo.Cursor} A cursor which returns user instances
      */
     followingAsUsers:function (limit, skip) {
-        var ids = this.followers(limit, skip).map(function(follow){
+        var ids = this.following(limit, skip).map(function(follow){
             return follow.followId;
         });
 
@@ -47,7 +47,7 @@ User.methods({
      * @returns {Mongo.Cursor} A cursor which returns user instances
      */
     followersAsUsers:function (limit, skip) {
-        var ids = this.follows(limit, skip).map(function(follow){
+        var ids = this.followers(limit, skip).map(function(follow){
             return follow.userId;
         });
 

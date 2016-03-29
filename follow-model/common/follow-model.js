@@ -40,11 +40,13 @@ Follow.appendSchema({
                 }
             }
         },
+        index: 1,
         denyUpdate:true
     },
     "followId":{
         type:String,
-        regEx:SimpleSchema.RegEx.Id
+        regEx:SimpleSchema.RegEx.Id,
+        index: 1
     },
     "date":{
         type:Date,
