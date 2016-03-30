@@ -1,6 +1,6 @@
 # Follows #
 
-Provides network style Follows.
+Provides social network style Follows.
 
 ## Follows ##
 
@@ -108,4 +108,4 @@ Template.userProfile.events({
 
 ## Publications ##
 
-Previous verions of this package provided convenient publications for publishing related data. Over the life of the package though, I have come to realize that publications are too application specific and you should not be locked in to a specific join package for the publications to be pre packaged. Instead publication examples can be found on the [github wiki page for this package](https://github.com/copleykj/socialize-follow/wiki/Publications).
+Data publications for this package are not provied as data publications are generally very application specific, and the choice of join package a personal one, so instead examples of how to publish data with `tmeasday:publish-with-relations` can be found on the [github wiki page for this package](https://github.com/copleykj/socialize-follow/wiki/Publications).
