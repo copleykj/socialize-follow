@@ -30,10 +30,10 @@ Follow.prototype.isDuplicate = function () {
 
 //Create the schema for a follow
 Follow.appendSchema({
-    "userId":{
-        type:String,
-        regEx:SimpleSchema.RegEx.Id,
-        autoValue:function () {
+    userId: {
+        type: String,
+        regEx: SimpleSchema.RegEx.Id,
+        autoValue: function () {
             if(this.isInsert){
                 if(!this.isSet && this.isFromTrustedCode){
                     return Meteor.userId();
@@ -43,18 +43,18 @@ Follow.appendSchema({
         index: 1,
         denyUpdate:true
     },
-    "followId":{
-        type:String,
-        regEx:SimpleSchema.RegEx.Id,
+    followId: {
+        type: String,
+        regEx: SimpleSchema.RegEx.Id,
         index: 1
     },
-    "date":{
+    createdAt: {
         type:Date,
-        autoValue:function() {
+        autoValue: function() {
             if(this.isInsert){
                 return new Date();
             }
         },
-        denyUpdate:true
+        denyUpdate: true
     }
 });
