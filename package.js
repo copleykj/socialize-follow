@@ -8,7 +8,7 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.3');
 
-  api.use(['socialize:user-model@1.0.0']);
+  api.use(['socialize:user-model@1.0.2']);
 
   api.imply('socialize:user-model');
 
